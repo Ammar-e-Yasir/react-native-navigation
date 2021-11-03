@@ -1,11 +1,16 @@
 import React from "react";
-import { View,Text } from "react-native";
+import { View,Text, TouchableOpacity } from "react-native";
 
 
-export default function  HelloWorld(){
+export default function  HelloWorld({navigation}){
     return(
     <View>
-        <Text>SceenTwo !</Text>
+        <Text>Hello World</Text>
+        <TouchableOpacity onPress={()=>{
+            navigation.navigate('Counter')
+        }}>
+            <Text>Counter</Text>
+        </TouchableOpacity>
     </View>
     )
 }
