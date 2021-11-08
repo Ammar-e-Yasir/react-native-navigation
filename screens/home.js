@@ -1,6 +1,12 @@
 import React from "react";
-export default function  Home(){
+import {View , Text} from 'react-native'
+export default function  Home({route,navigation}){
+    // console.log(route.params)
+    const {favFood,food} = route.params;
     return(
-        <h1>Home</h1>
+        <View>
+            <Text>Home {favFood}{food}</Text>
+            
+        </View>
     )
 }
